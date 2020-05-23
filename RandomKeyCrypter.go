@@ -10,7 +10,7 @@ import (
 )
 
 
-func keyvalue() []byte {
+func keyValue() []byte {
    key := make([]byte, 32)
      _, err := rand.Read(key)
     if err != nil {
@@ -32,7 +32,7 @@ func main() {
 	// The Key has to be at least 32 bytes
 	key := []byte("anything")
 
-	c, err := aes.NewCipher(key)
+	c, err := aes.NewCipher(keyValue())
 	if err != nil {
 		fmt.Println(err)
 	}
