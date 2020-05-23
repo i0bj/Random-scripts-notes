@@ -9,6 +9,15 @@ import (
 	"io/ioutil"
 )
 
+
+func keyvalue() []byte {
+   key := make([]byte, 32)
+     _, err := rand.Read(key)
+    if err != nil {
+	fmt.Println(err)
+	}
+   return key
+
 func main() {
 
 	fmt.Println("[+] Enter the file to encrypt: ")
